@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(65, 65, 65);
+  border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(54, 54, 54);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #282828;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1300px;
+}
+h1 {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+img {
+  object-fit: cover;
+  margin: 0.5rem;
+  height: 400px;
+  width: 400px;
+}
+
+img:first-child {
+  border-top-left-radius: 1rem;
+}
+
+img:nth-child(3) {
+  border-top-right-radius: 1rem;
+}
+
+img:last-child {
+  border-bottom-right-radius: 1rem;
+}
+img:nth-last-child(3) {
+  border-bottom-left-radius: 1rem;
+}
+
+@media (orientation: portrait) {
+  body {
+    overflow-x: hidden;
+  }
+
+  img:first-child {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  img:nth-child(3) {
+    border-top-right-radius: 0;
+  }
+
+  img:last-child {
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  img:nth-last-child(3) {
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  img {
+    width: 95%;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 1.5rem auto;
+  }
+}
