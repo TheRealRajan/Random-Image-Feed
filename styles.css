@@ -42,6 +42,16 @@ body {
   flex-wrap: wrap;
   max-width: 1300px;
 }
+.moreImagesButton {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: inherit;
+  margin: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 500px;
+  background-color: rgb(231, 231, 231);
+  color: rgb(94, 94, 94);
+}
 h1 {
   text-align: center;
   margin: 2rem auto;
@@ -54,19 +64,12 @@ img {
   width: 400px;
 }
 
-img:first-child {
+.first img:first-child {
   border-top-left-radius: 1rem;
 }
 
-img:nth-child(3) {
+.first img:nth-child(3) {
   border-top-right-radius: 1rem;
-}
-
-img:last-child {
-  border-bottom-right-radius: 1rem;
-}
-img:nth-last-child(3) {
-  border-bottom-left-radius: 1rem;
 }
 
 @media (orientation: portrait) {
@@ -74,21 +77,13 @@ img:nth-last-child(3) {
     overflow-x: hidden;
   }
 
-  img:first-child {
+  .first img:first-child {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
 
-  img:nth-child(3) {
+  .first img:nth-child(3) {
     border-top-right-radius: 0;
-  }
-
-  img:last-child {
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-  }
-  img:nth-last-child(3) {
-    border-bottom-left-radius: 0;
   }
 }
 
